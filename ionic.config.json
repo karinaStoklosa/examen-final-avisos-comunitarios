@@ -1,0 +1,7 @@
+{
+  "name": "publicaciones",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
