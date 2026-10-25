@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Publicación</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item lines="none" class="campo-titulo">
+    <ion-label position="stacked">Título</ion-label>
+    <ion-input
+      [(ngModel)]="titulo"
+      placeholder="Mascota perdida">
+    </ion-input>
+  </ion-item>
+
+  <div class="zona-fotografia">
+    <ion-button
+      color="dark"
+      class="boton-fotografia"
+      (click)="tomarFoto()">
+      <ion-icon name="camera-outline" slot="start"></ion-icon>
+      FOTOGRAFÍA
+    </ion-button>
+
+    <img
+      class="imagen-publicacion"
+      [src]="foto"
+      alt="Fotografía de la publicación">
+  </div>
+
+  <ion-item lines="none" class="campo-descripcion">
+    <ion-label position="stacked">Descripción</ion-label>
+    <ion-textarea
+      [(ngModel)]="descripcion"
+      placeholder="Perrito salchicha perdido en esquina Manuel Montt con los Olivos ...."
+      [autoGrow]="true">
+    </ion-textarea>
+  </ion-item>
+
+  <ion-button
+    class="boton-guardar"
+    (click)="guardarPublicacion()">
+    GUARDAR
+  </ion-button>
+
+  <p *ngIf="mensaje">{{ mensaje }}</p>
+
+</ion-content>

@@ -1,0 +1,63 @@
+ion-toolbar {
+  --background: #ffffff;
+  --color: #333333;
+  --border-color: #dddddd;
+}
+
+ion-toolbar ion-title {
+  color: #333333;
+  font-weight: 400;
+}
+
+ion-content {
+  --background: #ffffff;
+  --color: #222222;
+}
+
+ion-item {
+  --background: #ffffff;
+  --color: #222222;
+  --border-color: #eeeeee;
+}
+
+ion-label {
+  color: #222222;
+}
+
+ion-input,
+ion-textarea {
+  --color: #666666;
+  --placeholder-color: #888888;
+}
+
+.zona-fotografia {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 16px;
+  flex-wrap: wrap;
+}
+
+.boton-fotografia {
+  --background: #444444;
+  --color: #ffffff;
+}
+
+.imagen-publicacion {
+  width: 140px;
+  height: 106px;
+  object-fit: cover;
+}
+
+.campo-descripcion {
+  margin-top: 12px;
+}
+
+.boton-guardar {
+  --background: #3880ff;
+  --color: #ffffff;
+  --border-radius: 4px;
+  margin-top: 20px;
+  margin-left: 16px;
+  font-size: 14px;
+}

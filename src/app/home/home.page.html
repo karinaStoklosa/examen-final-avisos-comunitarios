@@ -1,20 +1,52 @@
-<ion-header [translucent]="true">
+
+<ion-header>
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Publicaciones</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item
+      class="fila-publicacion"
+      *ngFor="let publicacion of publicaciones">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-thumbnail slot="start">
+        <img
+          [src]="publicacion.foto"
+          [alt]="publicacion.titulo">
+      </ion-thumbnail>
+
+      <div class="datos-publicacion">
+        <div class="columna-nombre">
+          <div class="linea-superior">
+            <span class="titulo-principal">
+              {{ publicacion.titulo }}
+            </span>
+
+            <span class="fecha-publicacion">
+              {{ publicacion.fecha | fecha }}
+            </span>
+
+            <ion-button
+  fill="clear"
+  color="primary"
+  aria-label="Eliminar publicación"
+  (click)="eliminarPublicacion(publicacion.id)">
+  <ion-icon name="trash-outline"></ion-icon>
+</ion-button>
+          </div>
+        </div>
+      </div>
+
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    class="boton-crear"
+    shape="round"
+    routerLink="/publicacion"
+    aria-label="Crear publicación">
+    +
+  </ion-button>
 </ion-content>
